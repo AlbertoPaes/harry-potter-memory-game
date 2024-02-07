@@ -6,6 +6,7 @@ let firstCard;
 let secondCard;
 
 let moves = 0;
+let hits = 0;
 
 
 const shuffleCards = (array) => {
@@ -38,6 +39,13 @@ const closeModal = (cards) => {
   getGameBoard(cardsQuantity);
 }
 
+const turnCardsDown = () => {
+  firstCard.classList.remove('flip');
+  secondCard.classList.remove('flip');
+  firstCard = undefined;
+  secondCard = undefined;
+}
+
 const flipCard = (selectedCard) => {
   if(selectedCard.classList.contains('flip')) {
     return;
@@ -51,6 +59,24 @@ const flipCard = (selectedCard) => {
 
   moves++;
   selectedCard.classList.add('flip');
+
+  const isfirstCard = firstCard === undefined;
+  if (isfirstCard) {
+    firstCard = selectedCard;
+    return;
+  } 
+
+  secondCard = selectedCard;
+
+  const differentCards = firstCard.innerHTML !== secondCard.innerHTML;
+  if(differentCards) {
+    setTimeout(turnCardsDown, 1000);
+    return;
+  }
+
+  firstCard = undefined;
+  secondCard = undefined;
+  hits++;
 
 }
 
@@ -109,8 +135,6 @@ const getGameBoard = (cardsQuantity) => {
   }
   
   gameBoard.addEventListener('click', (event) => {
-    console.log(event.target);
-    console.log(event.target.parentNode);
     if(event.target.classList.contains('card-face')) {
       flipCard(event.target.parentNode);
     }
@@ -134,5 +158,4 @@ buttonsContainer.addEventListener('click', (event) => {
     }
   }
 })
-
 startButton.addEventListener('click', showGamePage);
