@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
-  <link rel="stylesheet" href="assets/styles/reset.css">
-  <link rel="stylesheet" href="assets/styles/style.css">
-  <title>Memory Game</title>
+  <link rel="stylesheet" href="src/styles/reset.css">
+  <link rel="stylesheet" href="src/styles/style.css">
+  <title>Harry Potter: Memory Game</title>
 </head>
 <body>
   <header>
@@ -14,7 +14,7 @@
       <video src="assets/videos/Animação Mapa do Maroto.mp4" autoplay muted loop></video>
       <div class="landing-page-content">
         <img src="assets/images/HarryPotterLogo.png" alt="HarryPotterLogo">
-        <button onclick="showGamePage()">Play</button>
+        <button class="start-button">Play</button>
       </div>
     </div>
   </header>
@@ -27,17 +27,27 @@
             <p>Choose the game mode</p>
           </div>
           <div class="buttons">
-            <button type="button" class="easy" onclick="closeModal()">Easy</button>
-            <button type="button" class="medium" onclick="closeModal()">Medium</button>
-            <button type="button" class="hard" onclick="closeModal()">Hard</button>
+            <button type="button" class="game-mode easy">Easy</button>
+            <button type="button" class="game-mode medium">Medium</button>
+            <button type="button" class="game-mode hard">Hard</button>
           </div>
         </div>
       </div>
     </div>
   </div>
   <div class="game-page hidden">
-    
+    <div class="game-content hidden">
+      <ul class="game-board">
+  
+      </ul>
+      <div class="game-info">
+
+      </div>
+    </div>
+    <div class="container-curiosities">
+
+    </div>
   </div>
-  <script src="assets/scripts/index.js"></script>
+  <script src="src/scripts/index.js"></script>
 </body>
 </html>
