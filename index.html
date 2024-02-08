@@ -14,7 +14,7 @@
       <video src="assets/videos/Animação Mapa do Maroto.mp4" autoplay muted loop></video>
       <div class="landing-page-content">
         <img src="assets/images/HarryPotterLogo.png" alt="HarryPotterLogo">
-        <button class="start-button">Play</button>
+        <button type="button" class="start-button">PLAY</button>
       </div>
     </div>
   </header>
@@ -27,9 +27,9 @@
             <p>Choose the game mode</p>
           </div>
           <div class="buttons">
-            <button type="button" class="game-mode easy">Easy</button>
-            <button type="button" class="game-mode medium">Medium</button>
-            <button type="button" class="game-mode hard">Hard</button>
+            <button type="button" class="btn_game-mode easy">Easy</button>
+            <button type="button" class="btn_game-mode medium">Medium</button>
+            <button type="button" class="btn_game-mode hard">Hard</button>
           </div>
         </div>
       </div>
@@ -41,13 +41,20 @@
   
       </ul>
       <div class="game-info">
-
+        <p class="moves">MOVES: </p>
+        <p class="playing-time">00:00</p>
+        <button type="button" class="restart-button">PLAY AGAIN</button>
       </div>
     </div>
     <div class="container-curiosities">
 
     </div>
   </div>
+  <div class="end-game-overlay hidden">
+    
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
   <script src="src/scripts/index.js"></script>
 </body>
 </html>
