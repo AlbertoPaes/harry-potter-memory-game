@@ -233,13 +233,19 @@ const flipCard = (selectedCard) => {
 }
 
 const cards = [
-  "bobrossparrot",
-  "explodyparrot",
-  "fiestaparrot",
-  "metalparrot",
-  "revertitparrot",
-  "tripletsparrot",
-  "unicornparrot",
+  "harry",
+  "hermione",
+  "ron",
+  "voldemort",
+  "sirius",
+  "dumbledore",
+  "bellatrix",
+  "malfoy",
+  "snape",
+  "hagrid",
+  "luna",
+  "neville",
+  "mcgonagall",
 ];
 
 const getGameBoard = (cardsQuantity) => {
