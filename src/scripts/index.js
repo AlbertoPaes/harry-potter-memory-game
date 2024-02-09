@@ -246,6 +246,9 @@ const cards = [
   "luna",
   "neville",
   "mcgonagall",
+  "hedwig",
+  "dobby",
+
 ];
 
 const getGameBoard = (cardsQuantity) => {
@@ -283,7 +286,7 @@ const getGameBoard = (cardsQuantity) => {
     backFace.setAttribute('data-identifier', 'back-face');
 
     const backFaceImage = document.createElement('img');
-    backFaceImage.src = `../../assets/images/${cardsArrangement[i]}.gif`;
+    backFaceImage.src = `../.././assets/images/${cardsArrangement[i]}.gif`;
     backFaceImage.alt = cardsArrangement[i];
     backFace.appendChild(backFaceImage);
 
