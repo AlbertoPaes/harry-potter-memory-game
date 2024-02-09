@@ -223,7 +223,7 @@ const flipCard = (selectedCard) => {
   curiosities.splice(randomIndex, 1);
 
 
-  imgCuriosities.src = `../../assets/images/curiosities/${randomCuriosity}.jpg`;
+  imgCuriosities.src = `assets/images/curiosities/${randomCuriosity}.jpg`;
   imgCuriosities.alt = randomCuriosity;
 
   firstCard = undefined;
@@ -278,7 +278,7 @@ const getGameBoard = (cardsQuantity) => {
     frontFace.setAttribute('data-identifier', 'front-face');
 
     const frontFaceImage = document.createElement('img');
-    frontFaceImage.src = '../../assets/images/front.png';
+    frontFaceImage.src = 'assets/images/front.png';
     frontFace.appendChild(frontFaceImage);
 
     const backFace = document.createElement('div');
@@ -286,7 +286,7 @@ const getGameBoard = (cardsQuantity) => {
     backFace.setAttribute('data-identifier', 'back-face');
 
     const backFaceImage = document.createElement('img');
-    backFaceImage.src = `../.././assets/images/${cardsArrangement[i]}.gif`;
+    backFaceImage.src = `assets/images/${cardsArrangement[i]}.gif`;
     backFaceImage.alt = cardsArrangement[i];
     backFace.appendChild(backFaceImage);
 
