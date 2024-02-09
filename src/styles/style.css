@@ -227,8 +227,8 @@
   padding-top: 20px;
   display: grid;
   grid-template-columns: repeat(4, minmax(150px, 1fr));
-  grid-template-rows: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 10px; /* Adicione espaçamento entre os itens se desejar */
+  grid-template-rows: repeat(auto-fill, minmax(125px, 1fr));
+  gap: 10px;
   
   align-items: center;
   justify-content: center;
@@ -279,14 +279,31 @@
   height: 90%;
   width: 40%;
 
-  margin-right: 40px;
+  display: flex;
+  flex-direction: column;
 
-  background-color: pink;
+  align-items: center;
+
+  background-image: url(../../assets/images/moldura.png);
+  background-size: 90% 95%;
+
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.container-curiosities img {
+  width: 75%;
+  height: 80%;
+
+  border-radius: 10px;
+
+  margin-top: 60px;
+
 }
 
 .card {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
 
   position: relative;
 
@@ -492,7 +509,6 @@
 
 .modal-title {
   color: rgba(0,0,0,.65);
-  font-weight: 600;
   text-transform: none;
   position: relative;
   display: block;
@@ -545,13 +561,208 @@
   cursor: pointer;
 }
 
-
-
-
-
-
-
-
 .hidden {
   display: none;
+}
+
+
+@media screen and (min-width: 1920px) {
+  .landing-page-content img {
+    width: 200%;
+  }
+
+  .landing-page-content button {
+    width: 500px;
+    height: 90px;
+
+    font-size: 40px;
+  }
+
+  .container-inner {
+    width: 70%;
+  }
+
+  .game-board {
+    gap: 110px;
+  }
+
+  .game-info {
+    height: 80px;
+  }
+
+  .game-info p,button {
+    font-size: 35px;
+  }
+
+  .game-info button {
+    width: 30%;
+  }
+
+  .card {
+    width: 170px;
+    height: 170px;
+  }
+
+  .card img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .container-curiosities img {
+    margin-top: 123px;
+  }
+
+  .modal-end-game {
+    width: 50%;
+    height: 50%;
+  }
+
+  .modal-icon:first-child {
+    margin-top: 70px;
+  }
+
+  .modal-icon {
+    margin: 60px auto;
+  }
+
+  .modal-title {
+    font-size: 50px;
+  }
+
+  .modal-title:not(:last-child) {
+    margin-bottom: 66px;
+  }
+
+  .modal-text {
+    font-size: 40px;
+    gap: 15px;
+  }
+
+  .modal-footer {
+    margin-top: 82px;
+  }
+
+  .modal-button {
+    width: 150px;
+    height: 65px;
+
+    font-size: 30px;
+  }
+
+}
+
+@media screen and (max-width: 1024px) {
+  .landing-page-content img {
+    width: 80%;
+  }
+
+  .landing-page-content button {
+    width: 150px;
+    height: 40px;
+  }
+
+  .container-curiosities img {
+    height: 82%;
+  
+    margin-top: 65px;
+  }
+
+  .card {
+    width: 110px;
+    height: 110px;
+  }
+
+  .card img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .game-info button {
+    width: 25%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .game-info button {
+    width: 35%;
+  }
+
+  .card {
+    width: 90px;
+    height: 90px;
+  }
+
+  .card img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .game-board {
+    grid-template-columns: repeat(4, minmax(115px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(105px, 1fr));
+  }
+
+  .game-info p, button {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .game-info button {
+    width: 35%;
+  }
+
+  .card {
+    width: 90px;
+    height: 90px;
+  }
+
+  .card img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .game-page {
+    justify-content: center;
+  }
+
+  .game-content {
+    width: 100%;
+    margin-left: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .game-board {
+    grid-template-columns: repeat(4, minmax(115px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(105px, 1fr));
+  }
+
+  .game-info {
+    width: 90%;
+    margin: 0 40px;
+  }
+
+  .game-info p, button {
+    font-size: 17px;
+  }
+
+  .container-curiosities {
+    display: none;
+  }
+
+  .modal-end-game {
+    width: 400px;
+  }
+
+  .modal-title {
+    font-size: 22px;
+  }
+
+  .modal-text {
+    font-size: 18px;
+  }
 }

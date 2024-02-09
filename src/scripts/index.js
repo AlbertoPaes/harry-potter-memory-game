@@ -44,7 +44,6 @@ const resetTimer = () => {
 
 const endGame = () => {
   const endGameOverlay = document.querySelector('.end-game-overlay');
-  console.log("fim do jogo");
   endGameOverlay.classList.remove('hidden');
 
 
@@ -160,8 +159,29 @@ const turnCardsDown = () => {
   secondCard = undefined;
 }
 
+const curiosities = [
+  "meme_01",
+  "meme_02",
+  "meme_03",
+  "meme_04",
+  "meme_05",
+  "meme_06",
+  "meme_07",
+  "meme_08",
+  "meme_09",
+  "meme_10",
+  "meme_11",
+  "meme_12",
+  "meme_13",
+  "meme_14",
+  "meme_15",
+];
+
+
 const flipCard = (selectedCard) => {
   const displayMoves = document.querySelector('.moves');
+
+  const imgCuriosities = document.querySelector('.curiosities');
 
   if(selectedCard.classList.contains('flip')) {
     return;
@@ -185,7 +205,6 @@ const flipCard = (selectedCard) => {
 
     if (timer === undefined) {
       timer = startTimer();
-      console.log("inicializando o timer");
     }
 
     return;
@@ -198,6 +217,14 @@ const flipCard = (selectedCard) => {
     setTimeout(turnCardsDown, 1000);
     return;
   }
+
+  const randomIndex = Math.floor(Math.random() * curiosities.length);
+  const randomCuriosity = curiosities[randomIndex];
+  curiosities.splice(randomIndex, 1);
+
+
+  imgCuriosities.src = `../../assets/images/curiosities/${randomCuriosity}.jpg`;
+  imgCuriosities.alt = randomCuriosity;
 
   firstCard = undefined;
   secondCard = undefined;
