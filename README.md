@@ -10,7 +10,6 @@
 <br>
 <div align=center style="display:flex; justify-content: center;">
     <img style = "height:250px;" src="https://imgur.com/qv76VEh.gif" alt="Game demo">
-    
 </div>
 <br><hr>
 
@@ -52,7 +51,7 @@
 ## Project management
 <br>
 <div align=center style="display:flex; justify-content: center;">
-    <img style = "height:250px;" src="https://imgur.com/LV4nD3b.gif" alt="Game demo">
+    <img style = "height:250px;" src="https://imgur.com/LV4nD3b.gif" alt="Project management">
     
 </div>
 <br><hr>
