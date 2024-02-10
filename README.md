@@ -9,7 +9,7 @@
 </div>
 <br>
 <div align=center style="display:flex; justify-content: center;">
-    <img style = "height:250px;" src="https://imgur.com/qv76VEh.gif" alt="Game demo">
+    <img style = "height:250px;" src="https://i.imgur.com/qv76VEh.gif&ct=g" alt="Game demo">
 </div>
 <br><hr>
 
